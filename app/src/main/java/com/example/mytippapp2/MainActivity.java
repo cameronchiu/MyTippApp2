@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         double Percentage = Double.parseDouble(percentage.getText().toString());
         double tip = 0;
         tip = Percentage*.01*Bill;
-        TIP.setText(tip);
+        TIP.setText(tip.toString());
 
     }
 }
