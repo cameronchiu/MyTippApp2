@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    DecimalFormat df = new DecimalFormat("##%");
+    DecimalFormat df = new DecimalFormat("$#####.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculateTip(View v){
-        TextView TIP = (TextView) findViewById(R.id.textViewTIP);
+        TextView textViewTipOutput = (TextView) findViewById(R.id.textViewTipOutput);
         EditText bill = (EditText) findViewById(R.id.editTextBill);
         EditText percentage = (EditText) findViewById(R.id.editTextPercentage);
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         double Percentage = Double.parseDouble(percentage.getText().toString());
         double tip = 0;
         tip = Percentage*.01*Bill;
-        TIP.setText(tip.toString());
+        textViewTipOutput.setText(""+df.format(tip));
 
     }
 }

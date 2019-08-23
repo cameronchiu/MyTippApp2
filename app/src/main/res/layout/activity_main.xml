@@ -10,7 +10,7 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="137dp"
+        android:layout_height="256dp"
         android:orientation="vertical">
 
         <EditText
@@ -20,8 +20,8 @@
             android:layout_row="1"
             android:layout_column="0"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="%" />
+            android:hint="%"
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/editTextBill"
@@ -30,14 +30,14 @@
             android:layout_row="0"
             android:layout_column="0"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Bill" />
+            android:hint="Bill"
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/textViewTIP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="2"
+            android:layout_row="3"
             android:layout_column="0"
             android:text="TIP:"
             android:textSize="24sp" />
@@ -46,9 +46,26 @@
             android:id="@+id/textViewTipOutput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="2"
+            android:layout_row="3"
             android:layout_column="1"
             android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonTip"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="calculateTip"
+            android:text="Calculate"
+            android:textSize="10sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="0" />
     </GridLayout>
 
 </LinearLayout>
