@@ -10,11 +10,11 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="256dp"
+        android:layout_height="742dp"
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editTextPercentage"
+            android:id="@+id/editTextPercentage2"
             android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -24,10 +24,20 @@
             android:inputType="numberDecimal" />
 
         <EditText
+            android:id="@+id/editTextPercentage"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="%"
+            android:inputType="numberDecimal" />
+
+        <EditText
             android:id="@+id/editTextBill"
             android:layout_width="47dp"
             android:layout_height="wrap_content"
-            android:layout_row="0"
+            android:layout_row="2"
             android:layout_column="0"
             android:ems="10"
             android:hint="Bill"
@@ -37,7 +47,7 @@
             android:id="@+id/textViewTIP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="3"
+            android:layout_row="4"
             android:layout_column="0"
             android:text="TIP:"
             android:textSize="24sp" />
@@ -46,26 +56,91 @@
             android:id="@+id/textViewTipOutput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="3"
-            android:layout_column="1"
+            android:layout_row="4"
+            android:layout_column="0"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/buttonTip"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_row="2"
+            android:layout_row="3"
             android:layout_column="0"
             android:onClick="calculateTip"
             android:text="Calculate"
             android:textSize="10sp" />
 
-        <SeekBar
-            android:id="@+id/seekBar2"
-            android:layout_width="match_parent"
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="7"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="5"
+            android:layout_column="0"
+            android:text="Quality Tip:"
+            android:textColor="#1C36F2"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="Normal Tip:"
+            android:textColor="#0048FF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:text="Rate your server" />
+
+        <TextView
+            android:id="@+id/textViewTIP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="11"
+            android:layout_column="0"
+            android:text="TIP:"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewTipOutput2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="10"
             android:layout_column="0" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_row="9"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Bill"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_row="10"
+            android:layout_column="0"
+            android:text="CALCULATE"
+            android:textSize="10sp"
+            android:onClick="calculateQualityTip"/>
+
     </GridLayout>
 
 </LinearLayout>
