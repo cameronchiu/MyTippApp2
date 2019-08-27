@@ -52,14 +52,6 @@
             android:text="TIP:"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/textViewTipOutput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:textSize="24sp" />
-
         <Button
             android:id="@+id/buttonTip"
             android:layout_width="wrap_content"
@@ -113,13 +105,6 @@
             android:layout_column="0"
             android:text="TIP:"
             android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/textViewTipOutput2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="10"
-            android:layout_column="0" />
 
         <EditText
             android:id="@+id/editText2"

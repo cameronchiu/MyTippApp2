@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculateTip(View v){
-        TextView textViewTipOutput = (TextView) findViewById(R.id.textViewTipOutput);
+
+        // the names of id are wrong, so empty string is causing an exception
+
+        TextView TIP = (TextView) findViewById(R.id.textViewTIP);
         EditText bill = (EditText) findViewById(R.id.editTextBill);
         EditText percentage = (EditText) findViewById(R.id.editTextPercentage);
 
@@ -31,21 +34,22 @@ public class MainActivity extends AppCompatActivity {
         double Percentage = Double.parseDouble(percentage.getText().toString());
         double tip = 0;
         tip = Percentage*.01*Bill;
-        textViewTipOutput.setText(""+df.format(tip));
+        TIP.setText("TIP: "+df.format(tip));
 
     }
 
     public void calculateQualityTip(View v){
-        TextView textViewTipOutput2 = (TextView)findViewById(R.id.textViewTipOutput2);
+
+        TextView TIP2 = (TextView) findViewById(R.id.textViewTIP2);
         EditText bill2 = (EditText) findViewById(R.id.editText2);
         EditText percentage2 = (EditText) findViewById(R.id.editTextPercentage2);
         RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
         double Bill2 = Double.parseDouble(bill2.getText().toString());
         double Percentage2 = Double.parseDouble(percentage2.getText().toString());
-        double tip = 0;
+        double tip2 = 0;
         double extra = ratingBar.getRating();
-        tip = Percentage2*.01*Bill2+extra;
-        textViewTipOutput2.setText(""+df.format(tip));
+        tip2 = Percentage2*.01*Bill2+extra;
+        TIP2.setText("TIP: "+df.format(tip2));
     }
 }
