@@ -9,28 +9,18 @@
     android:padding="5dp">
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="742dp"
+        android:layout_width="411dp"
+        android:layout_height="718dp"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/editTextPercentage2"
-            android:layout_width="45dp"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="%"
-            android:inputType="numberDecimal" />
-
-        <EditText
-            android:id="@+id/editTextPercentage"
-            android:layout_width="45dp"
+            android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:layout_row="8"
             android:layout_column="0"
             android:ems="10"
-            android:hint="%"
+            android:hint="Minimum %"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -44,16 +34,16 @@
             android:inputType="numberDecimal" />
 
         <TextView
-            android:id="@+id/textViewTIP"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewTip"
+            android:layout_width="281dp"
             android:layout_height="wrap_content"
             android:layout_row="4"
             android:layout_column="0"
-            android:text="TIP:"
+            android:text="TIP:    TOTAL:"
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/buttonTip"
+            android:id="@+id/buttonCalculate"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_row="3"
@@ -98,16 +88,16 @@
             android:text="Rate your server" />
 
         <TextView
-            android:id="@+id/textViewTIP2"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewTip2"
+            android:layout_width="288dp"
             android:layout_height="wrap_content"
             android:layout_row="11"
             android:layout_column="0"
-            android:text="TIP:"
+            android:text="TIP:    TOTAL:"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editTextBill2"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:layout_row="9"
@@ -117,14 +107,44 @@
             android:inputType="numberDecimal" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonCalculate2"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="0"
+            android:onClick="calculateQualityTip"
             android:text="CALCULATE"
-            android:textSize="10sp"
-            android:onClick="calculateQualityTip"/>
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/editTextPercentage"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="%"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_row="12"
+            android:layout_column="0"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="randomAct"
+            android:text="Random Act of Kindness!"
+            android:textColor="#00E2FF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="391dp"
+            android:layout_height="211dp"
+            android:layout_row="20"
+            android:layout_column="0"
+            android:text="Click to do a random act of kindess!" />
 
     </GridLayout>
 
