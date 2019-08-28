@@ -1,5 +1,5 @@
 /*
- * @project TippApp
+ * @project TipApp
  * @name Cameron Chiu
  * @teacher Denna
  * @period 5
